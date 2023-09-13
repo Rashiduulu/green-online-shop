@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green</title>
+    <link href="./dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <link rel="stylesheet" href="./plugins/slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./plugins/slick-1.8.1/slick/slick-theme.css" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <header class="sticky header top-0 z-50 bg-white h-[100px] duration-300">
+      <div class="w-full m-auto px-[10px] sm:px-[40px] py-[12px] relative">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-[24px] header-right">
+            <i
+              class="fas fa-bars text-[27px] cursor-pointer hover:text-[#3A9C6F] transition-all toggle-icon"
+            ></i>
+            <i
+              class="fas fa-xmark text-[27px] cursor-pointer hover:text-[#3A9C6F] transition-all toggle-icon"
+              style="display: none"
+            ></i>
+            <span class="text-[26px] font-medium hidden sm:block">Меню</span>
+          </div>
+          <a href="./main.html">
+            <img
+              src="./assets/images/Logo.svg"
+              alt="img"
+              class="logo-img w-[120px] h-[59px] sm:w-[154px] sm:h-[74px]"
+            />
+          </a>
+
+          <div class="flex items-center gap-2 sm:gap-[25px] header-left">
+            <img
+              src="./assets/images/headerImages/search-img.svg"
+              alt="img"
+              class="search-toggle cursor-pointer w-[28px] h-[26px]"
+            />
+
+            <div class="relative cursor-pointer">
+              <div
+                class="absolute -top-[8px] -right-[5px] flex h-[21px] w-[21px] items-center justify-center rounded-full bg-[#3A9C6F] text-white text-[14px]"
+              >
+                3
+              </div>
+              <img
+                src="./assets/images/headerImages/basket-img.svg"
+                alt="img"
+                class="w-[28px] h-[26px]"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="overflow w-full h-screen absolute top-[100%] left-0 bg-[#1d1d1d18] toggle-icon hidden"
+        ></div>
+
+        <div class="w-[70%] m-auto search-block absolute inset-0 top-5">
+          <div class="w-full flex items-center">
+            <img
+              src="./assets/images/headerImages/circle-x-mark.svg"
+              class="fas fa-xmark search-toggle w-[29px] h-[29px] mr-[26px] cursor-pointer"
+              alt="img"
+            />
+            <input
+              type="text"
+              placeholder="Поиск"
+              class="w-full outline-none border-[1px] h-[60px] px-4 rounded-full"
+            />
+            <button
+              class="search-button bg-[#3A9C6F] text-white h-[60px] w-[138px] rounded-full relative -left-12 hover:opacity-90"
+            >
+              Найти
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="navbar fixed left-0 px-[10px] sm:px-[40px] w-[375px] h-[100dvh] bg-[#F2F2F2] duration-300"
+      >
+        <ul class="flex flex-col">
+          <li
+            class="py-[21px] text-[20px] font-semibold border-b-[1px] border-t-[1px] cursor-pointer hover:text-[#3A9C6F] transition-all"
+          >
+            О нас
+          </li>
+          <div
+            class="toggle-catalog flex items-center w-full justify-between border-b-[1px] cursor-pointer hover:text-[#3A9C6F] transition-all"
+          >
+            <li class="py-[21px] text-[20px] font-semibold">Каталог</li>
+            <i class="fa fa-chevron-right text-[15px]"></i>
+          </div>
+          <li
+            class="py-[21px] text-[20px] font-semibold border-b-[1px] cursor-pointer hover:text-[#3A9C6F] transition-all"
+          >
+            Доставка оплата
+          </li>
+          <li
+            class="py-[21px] text-[20px] font-semibold border-b-[1px] cursor-pointer hover:text-[#3A9C6F] transition-all"
+          >
+            Контакты
+          </li>
+        </ul>
+        <div class="mt-[42px]">
+          <p class="text-[16px] cursor-pointer">
+            ТМ «Green» Кыргызская Республика, г. Бишкек, ул. Дзержинского, 245
+          </p>
+          <p class="text-[16px] font-semibold mt-[13px] cursor-pointer">
+            +996 (702) 888 552
+          </p>
+          <p
+            class="text-[16px] font-semibold mt-[13px] mb-[25px] cursor-pointer"
+          >
+            info@kstyle-opt.ru
+          </p>
+
+          <div class="flex items-center gap-[10px]">
+            <i
+              class="fab fa-instagram text-[26px] text-[#3A9C6F] cursor-pointer"
+            ></i>
+            <i
+              class="fab fa-facebook text-[26px] text-[#3A9C6F] cursor-pointer"
+            ></i>
+            <i
+              class="fab fa-whatsapp text-[26px] text-[#3A9C6F] cursor-pointer"
+            ></i>
+            <i
+              class="fab fa-telegram-plane text-[26px] text-[#3A9C6F] cursor-pointer"
+            ></i>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="catalog fixed left-0 px-[10px] sm:px-[40px] w-[375px] h-[100dvh] bg-[#F2F2F2]"
+      >
+        <ul class="flex flex-col">
+          <div
+            class="toggle-catalog flex items-center w-full border-b-[1px] gap-2 cursor-pointer hover:text-[#3A9C6F] transition-all"
+          >
+            <i class="fa fa-chevron-left text-[15px] h-3"></i>
+            <li class="py-[21px] text-[20px] font-semibold">Назад</li>
+          </div>
+          <li
+            class="py-[21px] text-[20px] font-semibold border-b-[1px] cursor-pointer hover:text-[#3A9C6F] transition-all"
+          >
+            Весь каталог
+          </li>
+          <div
+            class="flex items-center w-full justify-between border-b-[1px] cursor-pointer hover:text-[#3A9C6F] transition-all"
+          >
+            <li class="py-[21px] text-[20px] font-semibold">Новая коллекция</li>
+            <i class="fa fa-chevron-right text-[15px]"></i>
+          </div>
+          <div
+            class="flex items-center w-full justify-between border-b-[1px] cursor-pointer hover:text-[#3A9C6F] transition-all"
+          >
+            <li class="py-[21px] text-[20px] font-semibold">Верхняя одежда</li>
+            <i class="fa fa-chevron-right text-[15px]"></i>
+          </div>
+          <div
+            class="flex items-center w-full justify-between border-b-[1px] cursor-pointer hover:text-[#3A9C6F] transition-all"
+          >
+            <li class="py-[21px] text-[20px] font-semibold">
+              Пиджаки и костюмы
+            </li>
+            <i class="fa fa-chevron-right text-[15px]"></i>
+          </div>
+          <div
+            class="flex items-center w-full justify-between border-b-[1px] cursor-pointer hover:text-[#3A9C6F] transition-all"
+          >
+            <li class="py-[21px] text-[20px] font-semibold">
+              Детская верхняя одежда
+            </li>
+            <i class="fa fa-chevron-right text-[15px]"></i>
+          </div>
+        </ul>
+      </div>
+    </header>
+
+    <main class="max-w-[1444px] m-auto px-[10px] mb-[30px]">
+      <div
+        class="modal-window-size-table hidden fixed left-0 top-0 w-full h-full z-50"
+      >
+        <div class="flex justify-center items-center w-full h-full">
+          <div
+            class="w-[90%] md:w-[748px] h-[425px] shadow-xl pt-[40px] bg-white text-[#393939] relative px-[20px]"
+          >
+            <svg
+              class="x-mark-modal-window cursor-pointer text-[20px] absolute top-4 right-5"
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+            >
+              <path
+                d="M15 25C9.4875 25 5 20.5125 5 15C5 9.4875 9.4875 5 15 5C20.5125 5 25 9.4875 25 15C25 20.5125 20.5125 25 15 25ZM15 2.5C8.0875 2.5 2.5 8.0875 2.5 15C2.5 21.9125 8.0875 27.5 15 27.5C21.9125 27.5 27.5 21.9125 27.5 15C27.5 8.0875 21.9125 2.5 15 2.5ZM18.2375 10L15 13.2375L11.7625 10L10 11.7625L13.2375 15L10 18.2375L11.7625 20L15 16.7625L18.2375 20L20 18.2375L16.7625 15L20 11.7625L18.2375 10Z"
+                fill="#E0E0E0"
+              />
+            </svg>
+
+            <h1 class="text-center text-[26px] mb-[30px]">Таблица размеров</h1>
+
+            <div class="table-container max-h-[320px] overflow-auto">
+              <table class="text-xs">
+                <thead class="text-xs text-gray-700 bg-[#E0E0E0]">
+                  <tr class="font-semibold text-center">
+                    <th class="min-w-[124px] px-6 py-[11px]">
+                      Российский размер
+                    </th>
+                    <th class="min-w-[124px] px-6 py-[11px]">
+                      Размер производителя
+                    </th>
+                    <th class="min-w-[124px] px-6 py-[11px]">
+                      Обхват груди, в см.
+                    </th>
+                    <th class="min-w-[124px] px-6 py-[11px]">
+                      Обхват талии, в см.
+                    </th>
+                    <th class="min-w-[124px] px-6 py-[11px]">
+                      Обхват бедер, в см
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="font-semibold text-center">
+                    <th class="px-6 py-[8px] font-semibold">52</th>
+                    <td class="px-6 py-[8px]">52</td>
+                    <td class="px-6 py-[8px]">102-106</td>
+                    <td class="px-6 py-[8px]">82-86</td>
+                    <td class="px-6 py-[8px]">110-114</td>
+                  </tr>
+                  <tr class="font-semibold text-center">
+                    <th class="px-6 py-[8px] font-semibold">52</th>
+                    <td class="px-6 py-[8px]">52</td>
+                    <td class="px-6 py-[8px]">102-106</td>
+                    <td class="px-6 py-[8px]">82-86</td>
+                    <td class="px-6 py-[8px]">110-114</td>
+                  </tr>
+                  <tr class="font-semibold text-center">
+                    <th class="px-6 py-[8px] font-semibold">52</th>
+                    <td class="px-6 py-[8px]">52</td>
+                    <td class="px-6 py-[8px]">102-106</td>
+                    <td class="px-6 py-[8px]">82-86</td>
+                    <td class="px-6 py-[8px]">110-114</td>
+                  </tr>
+                  <tr class="font-semibold text-center">
+                    <th class="px-6 py-[8px] font-semibold">52</th>
+                    <td class="px-6 py-[8px]">52</td>
+                    <td class="px-6 py-[8px]">102-106</td>
+                    <td class="px-6 py-[8px]">82-86</td>
+                    <td class="px-6 py-[8px]">110-114</td>
+                  </tr>
+                  <tr class="font-semibold text-center">
+                    <th class="px-6 py-[8px] font-semibold">52</th>
+                    <td class="px-6 py-[8px]">52</td>
+                    <td class="px-6 py-[8px]">102-106</td>
+                    <td class="px-6 py-[8px]">82-86</td>
+                    <td class="px-6 py-[8px]">110-114</td>
+                  </tr>
+                  <tr class="font-semibold text-center">
+                    <th class="px-6 py-[8px] font-semibold">52</th>
+                    <td class="px-6 py-[8px]">52</td>
+                    <td class="px-6 py-[8px]">102-106</td>
+                    <td class="px-6 py-[8px]">82-86</td>
+                    <td class="px-6 py-[8px]">110-114</td>
+                  </tr>
+                  <tr class="font-semibold text-center">
+                    <th class="px-6 py-[8px] font-semibold">52</th>
+                    <td class="px-6 py-[8px]">52</td>
+                    <td class="px-6 py-[8px]">102-106</td>
+                    <td class="px-6 py-[8px]">82-86</td>
+                    <td class="px-6 py-[8px]">110-114</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <span class="text-[14px] text-[#A4A4A4] font-medium mt-[32px]"
+        >Главная / Каталог / Женские тренчи и куртки</span
+      >
+
+      <section class="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+        <div class="banner-content clearfix mt-[22px]">
+          <div class="">
+            <div class="banner-slider">
+              <div class="product-img-slide">
+                <div class="slider-for">
+                  <div class="w-full md:w-[280px] 2xl:w-[544px]">
+                    <img
+                      class="h-[472px] md:h-[640px] 2xl:h-[724px] object-cover"
+                      src="./assets/images/mainImages/pexels-grigoriy-5725726.jpg"
+                      alt="Product img"
+                    />
+                  </div>
+                  <div class="w-full md:w-[280px] 2xl:w-[544px]">
+                    <img
+                      class="h-[472px] md:h-[640px] 2xl:h-[724px] object-cover"
+                      src="./assets/images/mainImages/pexels-grigoriy-5725726.jpg"
+                      alt="Product img"
+                    />
+                  </div>
+                  <div class="w-full md:w-[280px] 2xl:w-[544px]">
+                    <img
+                      class="h-[472px] md:h-[640px] 2xl:h-[724px] object-cover"
+                      src="./assets/images/mainImages/pexels-grigoriy-5725726.jpg"
+                      alt="Product img"
+                    />
+                  </div>
+                  <div class="w-full md:w-[280px] 2xl:w-[544px]">
+                    <img
+                      class="h-[472px] md:h-[640px] 2xl:h-[724px] object-cover"
+                      src="./assets/images/mainImages/pexels-grigoriy-5725726.jpg"
+                      alt="Product img"
+                    />
+                  </div>
+                  <div class="w-full md:w-[280px] 2xl:w-[544px]">
+                    <img
+                      class="h-[472px] md:h-[640px] 2xl:h-[724px] object-cover"
+                      src="./assets/images/mainImages/pexels-grigoriy-5725726.jpg"
+                      alt="Product img"
+                    />
+                  </div>
+                  <div class="w-full md:w-[280px] 2xl:w-[544px]">
+                    <img
+                      class="h-[472px] md:h-[640px] 2xl:h-[724px] object-cover"
+                      src="./assets/images/mainImages/pexels-grigoriy-5725726.jpg"
+                      alt="Product img"
+                    />
+                  </div>
+                </div>
+                <div class="slider-nav">
+                  <div class="thumb-slide cursor-pointer">
+                    <img
+                      class="h-[166px] md:w-[108px] 2xl:w-[125px] object-cover"
+                      src="./assets/images/mainImages/pexels-grigoriy-5725726.jpg"
+                      alt="Thumb img"
+                    />
+                  </div>
+                  <div class="thumb-slide cursor-pointer">
+                    <img
+                      class="h-[166px] md:w-[108px] 2xl:w-[125px] object-cover"
+                      src="./assets/images/mainImages/pexels-grigoriy-5725726.jpg"
+                      alt="Thumb img"
+                    />
+                  </div>
+                  <div class="thumb-slide cursor-pointer">
+                    <img
+                      class="h-[166px] md:w-[108px] 2xl:w-[125px] object-cover"
+                      src="./assets/images/mainImages/pexels-grigoriy-5725726.jpg"
+                      alt="Thumb img"
+                    />
+                  </div>
+                  <div class="thumb-slide cursor-pointer">
+                    <img
+                      class="h-[166px] md:w-[108px] 2xl:w-[125px] object-cover"
+                      src="./assets/images/mainImages/pexels-grigoriy-5725726.jpg"
+                      alt="Thumb img"
+                    />
+                  </div>
+                  <div class="thumb-slide cursor-pointer">
+                    <img
+                      class="h-[166px] md:w-[108px] 2xl:w-[125px] object-cover"
+                      src="./assets/images/mainImages/pexels-grigoriy-5725726.jpg"
+                      alt="Thumb img"
+                    />
+                  </div>
+                  <div class="thumb-slide cursor-pointer">
+                    <img
+                      class="h-[166px] md:w-[108px] 2xl:w-[125px] object-cover"
+                      src="./assets/images/mainImages/pexels-grigoriy-5725726.jpg"
+                      alt="Thumb img"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h1
+            class="text-[24px] md:text-[38px] xl:text-[48px] text-[#393939] font-semibold mt-[12px] mb-[28px]"
+          >
+            Плащ с английским воротом 69-20(1)
+          </h1>
+
+          <span class="text-[16px] text-[#A4A4A4] mb-[18px]"
+            >Артикул: 1259-22(4)</span
+          >
+
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 gap-[23px] text-[#393939]"
+          >
+            <div>
+              <ul class="text-[16px]">
+                <li>
+                  <span class="font-semibold">Состав: </span> 50 % полиэстер 50
+                  % вискоза
+                </li>
+                <li><span class="font-semibold">Фасон: </span> прямой</li>
+                <li>
+                  <span class="font-semibold">Воротник: </span> английский
+                </li>
+                <li>
+                  <span class="font-semibold">Застежка: </span> однобортная на 4
+                  пуговицах
+                </li>
+                <li>
+                  <span class="font-semibold">Рукав: </span> втачной двушовный
+                  (3 пуговицы)
+                </li>
+                <li><span class="font-semibold">Подклад: </span> полиэстер</li>
+                <li><span class="font-semibold">Размеры: </span> S, M, L</li>
+                <li>
+                  <span class="font-semibold">Длина изделия: </span> изделия:
+                  120 см
+                </li>
+                <li><span class="font-semibold">Вес изделия: </span> 1 кг</li>
+                <li class="mt-[20px]">
+                  <span class="font-semibold">Рост модели: </span> 178 см
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="text-[18px] font-semibold">Цвет:</h4>
+
+              <ul class="flex items-center space-x-2 mt-[10px] mb-[22px]">
+                <li class="circle-color cursor-pointer active-color">
+                  <span></span>
+                </li>
+                <li class="circle-color cursor-pointer">
+                  <span></span>
+                </li>
+                <li class="circle-color cursor-pointer">
+                  <span></span>
+                </li>
+              </ul>
+
+              <h4 class="text-[18px] font-semibold">Размер:</h4>
+
+              <ul class="flex items-center space-x-2 mt-[22px] mb-[18px]">
+                <li
+                  class="p-2 border-[1px] border-[#000] rounded-lg cursor-pointer"
+                >
+                  42
+                </li>
+                <li
+                  class="p-2 border-[1px] border-[#000] rounded-lg cursor-pointer"
+                >
+                  42
+                </li>
+                <li
+                  class="p-2 border-[1px] border-[#000] rounded-lg cursor-pointer"
+                >
+                  42
+                </li>
+                <li
+                  class="p-2 border-[1px] border-[#000] rounded-lg cursor-pointer"
+                >
+                  42
+                </li>
+                <li
+                  class="p-2 border-[1px] border-[#000] rounded-lg cursor-pointer"
+                >
+                  42
+                </li>
+              </ul>
+
+              <span
+                class="size-table text-[16px] font-medium underline hover:no-underline cursor-pointer"
+                >Таблица размеров</span
+              >
+              <p class="text-[16px] font-medium mt-[25px]">
+                Минимальное количество изделия на заказ - <span>500 шт.</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="flex border-t-[1px] border-[#393939] mt-[46px]">
+            <div
+              class="flex justify-center items-center mt-[46px] gap-3 hover:bg-[#3A9C6F] hover:text-[#fff] hover:border-[#3A9C6F] transition border-[1px] border-[#393939] w-[335px] p-[14px] cursor-pointer add-to-basket"
+            >
+              <div class="relative cursor-pointer">
+                <svg
+                  class="w-[28px] h-[26px]"
+                  viewBox="0 0 29 27"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    id="onHover"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M8.16176 9.625C8.16176 5.79948 11.2129 2.84375 14.7923 2.84375C18.3717 2.84375 21.4229 5.79948 21.4229 9.625H8.16176ZM5.75065 9.625C5.75065 4.71176 9.71616 0.583328 14.7923 0.583328C19.8685 0.583328 23.834 4.71176 23.834 9.625H24.6644C26.4266 9.625 27.3078 9.625 27.895 9.96639C28.4093 10.2654 28.7832 10.7333 28.9423 11.2769C29.124 11.8976 28.8684 12.6804 28.3574 14.2461L28.3573 14.2461L25.2148 23.8733C24.9168 24.7861 24.7678 25.2424 24.4749 25.5807C24.2162 25.8793 23.8794 26.1113 23.4965 26.2545C23.0629 26.4167 22.5492 26.4167 21.5218 26.4167H8.06286C7.03548 26.4167 6.52178 26.4167 6.08811 26.2545C5.70527 26.1113 5.36841 25.8793 5.10978 25.5807C4.81681 25.2424 4.66783 24.7861 4.36988 23.8733L1.22729 14.2461C0.716219 12.6804 0.460684 11.8976 0.642337 11.2769C0.80142 10.7333 1.17538 10.2654 1.68964 9.96639C2.27686 9.625 3.158 9.625 4.92027 9.625H5.75065ZM3.41438 12.223C3.75994 12.2096 4.22661 12.2083 4.92027 12.2083H24.6644C25.358 12.2083 25.8247 12.2096 26.1703 12.223C26.0853 12.5183 25.9587 12.9102 25.7735 13.4776L22.6309 23.1048C22.5548 23.338 22.4957 23.5189 22.4423 23.6746C22.4225 23.7325 22.4049 23.7827 22.3891 23.8265C22.2012 23.8325 21.9402 23.8333 21.5218 23.8333H8.06286C7.64442 23.8333 7.38344 23.8325 7.19549 23.8265C7.17972 23.7827 7.1621 23.7325 7.14229 23.6746C7.08894 23.5189 7.02982 23.338 6.95371 23.1048L3.81112 13.4776C3.62591 12.9102 3.4993 12.5183 3.41438 12.223Z"
+                    fill="#393939"
+                  />
+                </svg>
+              </div>
+
+              <button type="button" class="uppercase font-semibold text-[14px]">
+                добавить в корзину
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tabs max-w-[1064px] m-auto text-[#393939] mt-[80px]">
+        <ul
+          id="tabs-nav"
+          class="flex gap-[36px] sm:gap-[55px] text-[16px] sm:text-[24px] font-semibold"
+        >
+          <li><a href="#tab1">Условия пошива</a></li>
+          <li><a href="#tab2">Доставка</a></li>
+          <li><a href="#tab3">Оплата</a></li>
+        </ul>
+        <div id="tabs-content" class="mt-[50px]">
+          <div id="tab1" class="tab-content text-[24px]">
+            <h2 class="text-[36px] mb-[34px] font-medium">
+              Условия пошива заказа
+            </h2>
+            <p>
+              Минимальный заказ -
+              <span class="text-[#3A9C6F]">500 шт. изделий</span> одной модели
+              товара, в котором будут включены
+              <span class="text-[#3A9C6F]">от 3 до 5 размеров и цветов.</span>
+              Подробнее о размерах и цветах вы сможете обсудить с личным
+              менеджером после оформления заказа.
+            </p>
+            <p class="my-[30px]">
+              На сайте опубликованы актуальные и трендовые модели на пошив, так
+              же вы можете заказать пошив по вашим моделям.
+            </p>
+            <p>
+              Для получения более детальной информации свяжитесь с нашими
+              менеджерами.
+            </p>
+
+            <button
+              type="button"
+              class="mt-[30px] px-[48px] py-[18px] border-[2px] border-[#3A9C6F] rounded-full hover:bg-transparent text-[18px] hover:text-[#3A9C6F] font-bold text-white bg-[#3A9C6F] transition"
+            >
+              СВЯЗАТЬСЯ
+            </button>
+          </div>
+          <div id="tab2" class="tab-content text-[24px]">
+            <h2 class="text-[36px] mb-[34px] font-medium">
+              Условия пошива заказа
+            </h2>
+            <p>
+              Минимальный заказ -
+              <span class="text-[#3A9C6F]">500 шт. изделий</span> одной модели
+              товара, в котором будут включены
+              <span class="text-[#3A9C6F]">от 3 до 5 размеров и цветов.</span>
+              Подробнее о размерах и цветах вы сможете обсудить с личным
+              менеджером после оформления заказа.
+            </p>
+            <p class="my-[30px]">
+              На сайте опубликованы актуальные и трендовые модели на пошив, так
+              же вы можете заказать пошив по вашим моделям.
+            </p>
+            <p>
+              Для получения более детальной информации свяжитесь с нашими
+              менеджерами.
+            </p>
+
+            <button
+              type="button"
+              class="mt-[30px] px-[48px] py-[18px] border-[2px] border-[#3A9C6F] rounded-full hover:bg-transparent text-[18px] hover:text-[#3A9C6F] font-bold text-white bg-[#3A9C6F] transition"
+            >
+              СВЯЗАТЬСЯ
+            </button>
+          </div>
+          <div id="tab3" class="tab-content text-[24px]">
+            <h2 class="text-[36px] mb-[34px] font-medium">
+              Условия пошива заказа
+            </h2>
+            <p>
+              Минимальный заказ -
+              <span class="text-[#3A9C6F]">500 шт. изделий</span> одной модели
+              товара, в котором будут включены
+              <span class="text-[#3A9C6F]">от 3 до 5 размеров и цветов.</span>
+              Подробнее о размерах и цветах вы сможете обсудить с личным
+              менеджером после оформления заказа.
+            </p>
+            <p class="my-[30px]">
+              На сайте опубликованы актуальные и трендовые модели на пошив, так
+              же вы можете заказать пошив по вашим моделям.
+            </p>
+            <p>
+              Для получения более детальной информации свяжитесь с нашими
+              менеджерами.
+            </p>
+
+            <button
+              type="button"
+              class="mt-[30px] px-[48px] py-[18px] border-[2px] border-[#3A9C6F] rounded-full hover:bg-transparent text-[18px] hover:text-[#3A9C6F] font-bold text-white bg-[#3A9C6F] transition"
+            >
+              СВЯЗАТЬСЯ
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-[77px] mb-[77px]">
+        <h1
+          class="text-[24px] md:text-[38px] xl:text-[48px] text-[#393939] font-semibold mt-[12px] mb-[32px]"
+        >
+          Похожие товары
+        </h1>
+        <div class="similar-products-slider px-[10px] md:px-[40px] sm:px-[0px]">
+          <div>
+            <div class="relative">
+              <img
+                class="sm:w-full h-[232px] md:h-[380px] lg:h-[445px] bg-no-repeat bg-cover object-cover"
+                src="./assets/images/mainImages/pexels-grigoriy-5725726.jpg"
+                alt="img"
+              />
+
+              <div class="like-heart not-liked">
+                <i class="far fa-heart"></i>
+              </div>
+            </div>
+
+            <div class="text-[#393939] text-[16px] font-medium mt-[20px]">
+              <span class="text-[#A4A4A4]">APT. 823784</span>
+              <p class="my-[10px]">
+                Фланелевая рубашка женская оверсайз в клетку утепленная
+              </p>
+              <span class="text-[20px] font-semibold">2 050 ₽</span>
+
+              <ul class="flex items-center space-x-2 mt-[10px]">
+                <li
+                  class="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] rounded-full bg-[green] cursor-pointer"
+                ></li>
+                <li
+                  class="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] rounded-full bg-[red] cursor-pointer"
+                ></li>
+                <li
+                  class="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] rounded-full bg-[blue] cursor-pointer"
+                ></li>
+                <li
+                  class="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] rounded-full bg-[purple] cursor-pointer"
+                ></li>
+                <li
+                  class="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] rounded-full bg-[pink] cursor-pointer"
+                ></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="relative">
+              <img
+                class="sm:w-full h-[232px] md:h-[380px] lg:h-[445px] bg-no-repeat bg-cover object-cover"
+                src="./assets/images/mainImages/pexels-grigoriy-5725726.jpg"
+                alt="img"
+              />
+              <div class="like-heart not-liked">
+                <i class="far fa-heart"></i>
+              </div>
+            </div>
+
+            <div class="text-[#393939] text-[16px] font-medium mt-[20px]">
+              <span class="text-[#A4A4A4]">APT. 823784</span>
+              <p class="my-[10px]">
+                Фланелевая рубашка женская оверсайз в клетку утепленная
+              </p>
+              <span class="text-[20px] font-semibold">2 050 ₽</span>
+
+              <ul class="flex items-center space-x-2 mt-[10px]">
+                <li
+                  class="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] rounded-full bg-[green] cursor-pointer"
+                ></li>
+                <li
+                  class="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] rounded-full bg-[red] cursor-pointer"
+                ></li>
+                <li
+                  class="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] rounded-full bg-[blue] cursor-pointer"
+                ></li>
+                <li
+                  class="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] rounded-full bg-[purple] cursor-pointer"
+                ></li>
+                <li
+                  class="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] rounded-full bg-[pink] cursor-pointer"
+                ></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="relative">
+              <img
+                class="sm:w-full h-[232px] md:h-[380px] lg:h-[445px] bg-no-repeat bg-cover object-cover"
+                src="./assets/images/mainImages/pexels-grigoriy-5725726.jpg"
+                alt="img"
+              />
+              <div class="like-heart not-liked">
+                <i class="far fa-heart"></i>
+              </div>
+            </div>
+
+            <div class="text-[#393939] text-[16px] font-medium mt-[20px]">
+              <span class="text-[#A4A4A4]">APT. 823784</span>
+              <p class="my-[10px]">
+                Фланелевая рубашка женская оверсайз в клетку утепленная
+              </p>
+              <span class="text-[20px] font-semibold">2 050 ₽</span>
+
+              <ul class="flex items-center space-x-2 mt-[10px]">
+                <li
+                  class="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] rounded-full bg-[green] cursor-pointer"
+                ></li>
+                <li
+                  class="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] rounded-full bg-[red] cursor-pointer"
+                ></li>
+                <li
+                  class="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] rounded-full bg-[blue] cursor-pointer"
+                ></li>
+                <li
+                  class="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] rounded-full bg-[purple] cursor-pointer"
+                ></li>
+                <li
+                  class="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] rounded-full bg-[pink] cursor-pointer"
+                ></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="relative">
+              <img
+                class="sm:w-full h-[232px] md:h-[380px] lg:h-[445px] bg-no-repeat bg-cover object-cover"
+                src="./assets/images/mainImages/pexels-grigoriy-5725726.jpg"
+                alt="img"
+              />
+              <div class="like-heart not-liked">
+                <i class="far fa-heart"></i>
+              </div>
+            </div>
+
+            <div class="text-[#393939] text-[16px] font-medium mt-[20px]">
+              <span class="text-[#A4A4A4]">APT. 823784</span>
+              <p class="my-[10px]">
+                Фланелевая рубашка женская оверсайз в клетку утепленная
+              </p>
+              <span class="text-[20px] font-semibold">2 050 ₽</span>
+
+              <ul class="flex items-center space-x-2 mt-[10px]">
+                <li
+                  class="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] rounded-full bg-[green] cursor-pointer"
+                ></li>
+                <li
+                  class="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] rounded-full bg-[red] cursor-pointer"
+                ></li>
+                <li
+                  class="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] rounded-full bg-[blue] cursor-pointer"
+                ></li>
+                <li
+                  class="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] rounded-full bg-[purple] cursor-pointer"
+                ></li>
+                <li
+                  class="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] rounded-full bg-[pink] cursor-pointer"
+                ></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <div class="relative">
+              <img
+                class="sm:w-full h-[232px] md:h-[380px] lg:h-[445px] bg-no-repeat bg-cover object-cover"
+                src="./assets/images/mainImages/pexels-grigoriy-5725726.jpg"
+                alt="img"
+              />
+              <div class="like-heart not-liked">
+                <i class="far fa-heart"></i>
+              </div>
+            </div>
+
+            <div class="text-[#393939] text-[16px] font-medium mt-[20px]">
+              <span class="text-[#A4A4A4]">APT. 823784</span>
+              <p class="my-[10px]">
+                Фланелевая рубашка женская оверсайз в клетку утепленная
+              </p>
+              <span class="text-[20px] font-semibold">2 050 ₽</span>
+
+              <ul class="flex items-center space-x-2 mt-[10px]">
+                <li
+                  class="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] rounded-full bg-[green] cursor-pointer"
+                ></li>
+                <li
+                  class="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] rounded-full bg-[red] cursor-pointer"
+                ></li>
+                <li
+                  class="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] rounded-full bg-[blue] cursor-pointer"
+                ></li>
+                <li
+                  class="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] rounded-full bg-[purple] cursor-pointer"
+                ></li>
+                <li
+                  class="w-[16px] h-[16px] sm:w-[18px] sm:h-[18px] md:w-[24px] md:h-[24px] rounded-full bg-[pink] cursor-pointer"
+                ></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="px-[10px] pt-[53px] pb-[39px] mx-[10px] md:mx-[40px] mb-[42px] bg-[#F2F2F2] rounded-[12px] relative"
+    >
+      <img
+        id="scrollButton"
+        onclick="scrollToTop()"
+        class="absolute top-10 right-10 cursor-pointer h-[68px] w-[68px]"
+        src="./assets/images/arrow-top.svg"
+        alt="img"
+      />
+      <div
+        class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-[20px] md:px-[60px] max-w-[1921px] m-auto pb-[79px]"
+      >
+        <div>
+          <img
+            class="w-[190px] h-[92px] lg:absolute"
+            src="./assets/images/Logo.svg"
+            alt="img"
+          />
+
+          <div class="mt-[49px] md:mt-[100px] lg:mt-[155px]">
+            <div class="flex items-center gap-3 mb-[14px] cursor-pointer">
+              <i
+                class="fab fa-facebook text-[26px] text-[#3A9C6F] cursor-pointer"
+              ></i>
+              <p class="text-[20px] text-[#393939] font-medium">Facebook</p>
+            </div>
+            <div class="flex items-center gap-3 mb-[14px] cursor-pointer">
+              <i
+                class="fab fa-instagram text-[26px] text-[#3A9C6F] cursor-pointer"
+              ></i>
+              <p class="text-[20px] text-[#393939] font-medium">
+                @green_brandkg
+              </p>
+            </div>
+            <div class="flex items-center gap-3 mb-[14px] cursor-pointer">
+              <i
+                class="fab fa-whatsapp text-[26px] text-[#3A9C6F] cursor-pointer"
+              ></i>
+              <p class="text-[20px] text-[#393939] font-medium">
+                +996 (702) 88 85 52
+              </p>
+            </div>
+            <div class="flex items-center gap-3 mb-[14px] cursor-pointer">
+              <i
+                class="fab fa-telegram-plane text-[26px] text-[#3A9C6F] cursor-pointer"
+              ></i>
+              <p class="text-[20px] text-[#393939] font-medium">
+                +996 (702) 88 85 52
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="text-[#393939] mt-[49px] md:mt-[100px] lg:mt-[155px] xl:mt-[0px]"
+        >
+          <h1 class="uppercase text-[20px] font-medium mb-[34px]">
+            информация
+          </h1>
+
+          <ul class="text-[20px] font-medium flex flex-col space-y-[20px]">
+            <li class="cursor-pointer">О нас</li>
+            <li class="cursor-pointer">Каталог</li>
+            <li class="cursor-pointer">Доставка и Оплата</li>
+            <li class="cursor-pointer">Контакты</li>
+          </ul>
+        </div>
+        <div
+          class="text-[#393939] mt-[49px] md:mt-[100px] lg:mt-[155px] xl:mt-[0px]"
+        >
+          <h1 class="uppercase text-[20px] font-medium mb-[34px]">каталог</h1>
+
+          <ul class="text-[20px] font-medium flex flex-col space-y-[20px]">
+            <li class="cursor-pointer">Новая коллекция</li>
+            <li class="cursor-pointer">Верхняя одежда</li>
+            <li class="cursor-pointer">Пиджаки и костюмы</li>
+            <li class="cursor-pointer">Десткая верхняя одежда</li>
+          </ul>
+        </div>
+        <div
+          class="text-[#393939] mt-[49px] md:mt-[100px] lg:mt-[155px] xl:mt-[0px]"
+        >
+          <h1 class="uppercase text-[20px] font-medium mb-[34px]">Контакты</h1>
+
+          <ul
+            class="text-[20px] font-medium flex flex-col space-y-[20px] mb-[35px]"
+          >
+            <li class="cursor-pointer">
+              ТМ «Green» Кыргызская Республика, г. Бишкек, ул. Дзержинского, 245
+            </li>
+            <li class="cursor-pointer">+996 (702) 888 552</li>
+            <li class="cursor-pointer">info@kstyle-opt.ru</li>
+          </ul>
+
+          <button
+            type="button"
+            class="px-[48px] py-[18px] border-[2px] border-[#3A9C6F] rounded-full hover:bg-transparent text-[18px] hover:text-[#3A9C6F] font-bold text-white bg-[#3A9C6F] transition"
+          >
+            СВЯЗАТЬСЯ
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="max-w-[1921px] m-auto px-[10px] md:px-[60px] flex flex-col-reverse sm:flex-row text-center sm:text-left justify-between text-[16px] font-medium"
+      >
+        <span>© GREEN 2023</span>
+        <p>Политика конфиденциальности</p>
+      </div>
+    </footer>
+
+    <div
+      id="preloader"
+      class="loading-spinner"
+      style="
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: rgb(255, 255, 255);
+        z-index: 9999999;
+      "
+    >
+      <div class="spinner"></div>
+    </div>
+
+    <!-- jQuery cdn -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- slick slider js -->
+    <script src="./plugins/slick-1.8.1/slick/slick.js"></script>
+
+    <!-- custom js -->
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
